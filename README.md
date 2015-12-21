@@ -1,0 +1,2 @@
+# AFPushNotificationServiceSDK
+AFPushNotificationServiceSDK for iOS
