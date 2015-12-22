@@ -1,6 +1,0 @@
-framework module AFPushNotificationServiceSDK {
-  umbrella header "AFPushNotificationServiceSDK.h"
-
-  export *
-  module * { export * }
-}
