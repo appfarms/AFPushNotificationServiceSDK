@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFPushNotificationServiceSDK"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.summary      = "Receive push notifications with AFPushNotificationServiceSDK."
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source = { :git => 'https://github.com/appfarms/AFPushNotificationServiceSDK.git', :tag => "0.0.6" }
+  s.source = { :git => 'https://github.com/appfarms/AFPushNotificationServiceSDK.git', :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -93,8 +93,6 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "AFPushNotificationServiceSDK/*.h"
-  #s.exclude_files = "Classes/Exclude"
-  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,8 +103,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources      = "README.md"
   s.preserve_paths = "AFPushNotificationServiceSDK"
 
 
@@ -116,10 +113,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "SomeFramework"
+
   s.frameworks  = 'UIKit', 'Foundation'
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
