@@ -15,9 +15,20 @@ typedef NS_ENUM(NSUInteger, AFPushEnvironment)
     AFPushEnvironmentDebug   = 3
 };
 
+typedef NS_ENUM(NSUInteger, AFPushLogLevel)
+{
+    AFPushLogLevelNone,
+    AFPushLogLevelError,
+    AFPushLogLevelWarning,
+    AFPushLogLevelInfo,
+    AFPushLogLevelDebug
+};
+
 @interface AFPushManager : NSObject
 
 + (void) configureWithApiKey:(NSString *)apiKey andEnvironment:(AFPushEnvironment)environment;
+
++ (void) setLogLevel:(AFPushLogLevel)logLevel;
 
 /**
  
@@ -47,11 +58,9 @@ typedef NS_ENUM(NSUInteger, AFPushEnvironment)
  */
 + (void) handleLaunchOptions:(NSDictionary *)launchOptions;
 
++ (void) setAdditionalTrackingInfo:(NSMutableDictionary *)additionalTrackingInfo;
 + (void) trackApplicationDidBecomeActive;
 + (void) trackApplicationDidEnterBackground;
 + (void) trackApplicationDidShowScreen:(NSString *)screen;
-
-+ (void) transmitLogWithCompletionBlock:(void (^)())completionBlock
-                           failureBlock:(void (^)(NSError *error))failureBlock;
 
 @end
