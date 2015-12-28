@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFPushNotificationServiceSDK"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "Receive push notifications with AFPushNotificationServiceSDK."
 
   # This description is used to generate tags and improve search results.
@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
   #
 
 
-  s.frameworks  = 'UIKit', 'Foundation'
+  s.frameworks  = 'CoreTelephony', 'UIKit', 'Foundation'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
