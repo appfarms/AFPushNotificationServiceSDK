@@ -26,6 +26,14 @@ typedef NS_ENUM(NSUInteger, AFPushLogLevel)
     AFPushLogLevelDebug    // Show a lot of debugging infos in log
 };
 
+typedef NS_ENUM(NSUInteger, AFPushTrackTransmissionInterval)
+{
+    AFPushTrackTransmissionIntervalNormal            = 300, // Transmit tracking data every 5 minutes
+    AFPushTrackTransmissionIntervalFrequently        = 60,  // Transmit tracking data every minute
+    AFPushTrackTransmissionIntervalExtremeFrequently = 10,  // Transmit tracking data every 10 seconds
+    AFPushTrackTransmissionIntervalInfrequently      = 600  // Transmit tracking data every 10 minutes
+};
+
 @interface AFPushManager : NSObject
 
 /**
@@ -47,6 +55,15 @@ typedef NS_ENUM(NSUInteger, AFPushLogLevel)
  @param logLevel A logLevel of type AFPushLogLevel
  */
 + (void) setLogLevel:(AFPushLogLevel)logLevel;
+
+/**
+ @abstract Adjust the frequency of tranmitting data to database
+
+ @discussion Default is AFPushTrackTransmissionIntervalNormal
+
+ @param trackTransmissionInterval A trackTransmissionInterval of type AFPushTrackTransmissionInterval
+ */
++ (void) setTrackTransmissionInterval:(AFPushTrackTransmissionInterval)trackTransmissionInterval;
 
 /**
  @abstract Register device with deviceToken to receive push notifications from https://push.appfarms.com
@@ -84,6 +101,9 @@ typedef NS_ENUM(NSUInteger, AFPushLogLevel)
  */
 + (void) setAdditionalTrackingInfo:(NSMutableDictionary *)additionalTrackingInfo;
 
-+ (void) registerViewControllerForTracking:(UIViewController<AFTrackingProtocol>*)viewController;
+/**
+ @abstract Verify if current device is connected to internet
+ */
++ (BOOL) hasInternetConnection;
 
 @end
