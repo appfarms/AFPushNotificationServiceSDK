@@ -9,7 +9,7 @@
 @protocol AFTrackingProtocol <NSObject>
 
 @optional
-- (BOOL) ignoreInTrackings; // If not implemented: Default is NO
-- (NSString *) trackingTitle;
+- (NSString *) afTrackingTitle;
+- (NSString *) afTrackingDetails;
 
 @end

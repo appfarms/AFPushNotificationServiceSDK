@@ -34,6 +34,13 @@ typedef NS_ENUM(NSUInteger, AFPushTrackTransmissionInterval)
     AFPushTrackTransmissionIntervalInfrequently      = 600  // Transmit tracking data every 10 minutes
 };
 
+typedef NS_ENUM(NSUInteger, AFPushAutoTrackingMode)
+{
+    AFPushAutoTrackingModeOptIn, // Every UIViewController will be recognized that implements at least `afTrackingTitle` from AFTrackingProtocol
+    AFPushAutoTrackingModeAll,   // Every UIViewController will be recognized
+    AFPushAutoTrackingModeNone   // No UIViewController will be tracked automatically
+};
+
 @interface AFPushManager : NSObject
 
 /**
@@ -45,7 +52,7 @@ typedef NS_ENUM(NSUInteger, AFPushTrackTransmissionInterval)
  @param environment The environment you want the manager to work with
  @param enableTracking
  */
-+ (void) configureWithApiKey:(NSString *)apiKey environment:(AFPushEnvironment)environment enableTracking:(BOOL)enableTracking;
++ (void) configureWithApiKey:(NSString *)apiKey environment:(AFPushEnvironment)environment enableTracking:(BOOL)enableTracking autoTrackingMode:(AFPushAutoTrackingMode)autoTrackingMode;
 
 /**
  @abstract Set the logLevel to see log
@@ -105,5 +112,9 @@ typedef NS_ENUM(NSUInteger, AFPushTrackTransmissionInterval)
  @abstract Verify if current device is connected to internet
  */
 + (BOOL) hasInternetConnection;
+
++ (void) trackApplicationDidShowScreen:(NSString *)screen details:(NSString *)details;
+
++ (void) trackApplicationDidShowScreen:(NSString *)screen details:(NSString *)details startDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 @end
