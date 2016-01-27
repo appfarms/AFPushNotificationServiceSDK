@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFPushNotificationServiceSDK"
-  s.version      = "0.0.15"
-  s.summary      = "Receive push notifications with AFPushNotificationServiceSDK."
+  s.version      = "0.0.16"
+  s.summary      = "Receive push notifications with appfarms Push Notification Service."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "http://push.appfarms.com"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -43,7 +42,6 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #s.license      = "MIT"
   s.license = { :type => "Copyright", :text => "Copyright 2015 - 2016 appfarms GmbH & Co KG. All rights reserved." }
 
 
@@ -65,14 +63,10 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
   s.platform = :ios
 
   #  When using multiple platforms
   s.ios.deployment_target = "7.0"
-  # s.osx.deployment_target = "10.7"
-  # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -114,7 +108,7 @@ Pod::Spec.new do |s|
   #
 
 
-  s.frameworks  = 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'Foundation'
+  s.frameworks  = 'SystemConfiguration', 'CoreTelephony', 'UIKit', 'Foundation', 'Security'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
