@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFPushNotificationServiceSDK"
-  s.version      = "0.0.16"
+  s.version      = "0.0.17"
   s.summary      = "Receive push notifications with appfarms Push Notification Service."
 
   # This description is used to generate tags and improve search results.

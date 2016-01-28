@@ -2,7 +2,7 @@
 
 ## Changelog
 
-### Version 0.0.16
+### Version 0.0.17, 0.0.16
 
 - Improved code stability
 - Wrote README.md
@@ -15,9 +15,10 @@ Features supported:
 
 1. **Enable Push Notifications:** Enable remote push notifications for your mobile app. The library automatically registers the device token with the appfarms Push Notification Service so that you easily can send remote push notifications via the appfarms Push Notification Service web frontend.
 
-2. **Analytics:** Analyze your app usage. There are three The SDK can do everything automatically for you or control everything you want to track or
-
-3. **Custom Parameter:**
+2. **Analytics:** Developers can then use the appfarms Analytics reports to measure:
+  1. The number of active users are using their applications.
+  2. Adoption and usage of specific features.
+  3. And many other useful metrics...
 
 This document contains the following sections:
 
@@ -117,11 +118,6 @@ end
 
 <a id="analytics"></a>
 ### 2.3 Analytics
-
-TODO
-
-<a id="customparameter"></a>
-### 2.4 Custom Parameter
 
 TODO
 
