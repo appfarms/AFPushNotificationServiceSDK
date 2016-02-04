@@ -2,7 +2,11 @@
 
 ## Changelog
 
-### Version 0.0.17, 0.0.16
+### Version 0.0.18
+
+- Improved workflow for disabling notifications
+
+## 0.0.17, 0.0.16
 
 - Improved code stability
 - Wrote README.md
