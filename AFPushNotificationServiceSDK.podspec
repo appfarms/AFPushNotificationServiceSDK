@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AFPushNotificationServiceSDK"
-  s.version      = "0.0.20"
+  s.version      = "0.1.0"
   s.summary      = "Receive push notifications with appfarms Push Notification Service."
 
   # This description is used to generate tags and improve search results.
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license = { :type => "Copyright", :text => "Copyright 2015 - 2016 appfarms GmbH & Co KG. All rights reserved." }
+  s.license = { :type => "Copyright", :text => "Copyright 2015 - 2017 appfarms GmbH & Co KG. All rights reserved." }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
